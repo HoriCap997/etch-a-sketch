@@ -1,16 +1,42 @@
-:root {
-    --gridCols: 1;
-    --gridRows: 1;
+:root {   
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
   }
+ 
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: flex-start;
+    gap:100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.setting{
+    display:flex;
+    flex-direction: column;
+}
   
-  #grid {
+.grid {
     display: grid;
-    grid-template-rows: repeat(var(--gridRows), 1fr);
-    grid-template-columns: repeat(var(--gridCols), 1fr);
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
-  .gridItem {
-    padding: 1em;
-    border: 1px solid rgb(0, 0, 0);
-    text-align: center;
+.gridItem {
+    user-select: none; 
+  }
+
+button{
+      padding: 10px 20px;
+      border: 1px solid var(--primary-dark);
+      border-radius:  1em;
+  }
+
+button.active{
+
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
   }
